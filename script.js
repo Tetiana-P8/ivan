@@ -15,16 +15,25 @@
 
 // alert(`Тебе ${age} лет!`);
 
-const category = 'toys'; 
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?');
+const personalMovieDB = {
+	count: numberOfFilms,
+	movies : {},
+	actors : {},
+	genres: [],
+	ptivat: false
+};
 
-console.log(4 + +'5');
-
-let incr = 10,
-	decr = 10;
-
-// ++incr;
-// --decr;
+const lastOfFilms = prompt('Один из последних просмотренных фильмов?'),
+	starOfFilms = +prompt('На сколько оцените его?'),
+	lastOfFilms2 = prompt('Один из последних просмотренных фильмов?'),
+	starOfFilms2 = +prompt('На сколько оцените его?');
 
 
-console.log(incr++);
-console.log(decr--);
+
+
+personalMovieDB.movies[lastOfFilms] = starOfFilms;
+personalMovieDB.movies[lastOfFilms2] = starOfFilms2;
+
+
+console.log(personalMovieDB);
